@@ -1,0 +1,35 @@
+{
+  "name": "simple-fitbit-heartrate",
+  "version": "0.0.1",
+  "description": "Module to simplify access to heart rate inside Fitbit OS applications",
+  "author": "Jérémy Jeanson (https://www.bugshunter.net)",
+  "license": "MIT",
+  "homepage": "https://github.com/JeremyJeanson/simple-fitbit-heartrate",
+  "bugs": {
+    "url": "https://github.com/JeremyJeanson/simple-fitbit-heartrate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeremyJeanson/simple-fitbit-heartrate.git"
+  },
+  "keywords": [
+    "fitbit",
+    "fitbitdev",
+    "activity",
+    "typescript"
+  ],
+  "devDependencies": {
+    "typescript": "4.0.3",
+    "tslib": "2.0.1",
+    "@typescript-eslint/eslint-plugin": "4.4.0",
+    "@typescript-eslint/parser": "4.4.0",
+    "eslint": "7.10.0",    
+    "@fitbit/sdk": "5.0.1",
+    "fitbit-sdk-types": "6.0.0"
+  },
+  "scripts": {
+    "build":"@powershell Copy-Item -Path ./package.json,../README.md,../LICENSE -Destination ../distribution/ && tsc --build",
+    "clean": "tsc --build --clean && @powershell Remove-Item ../distribution/*.*",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  }
+}

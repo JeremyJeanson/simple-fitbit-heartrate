@@ -1,0 +1,18 @@
+{
+	"extends": "./node_modules/@fitbit/sdk/sdk-tsconfig.json",
+	"compilerOptions": {
+		"strict": true,
+		"noEmit": false,
+		"outDir": "../distribution",
+		"sourceMap": false,
+		"declaration": true,
+		"removeComments": false		
+	},
+	"include": [
+		"./node_modules/fitbit-sdk-types/types/device",
+		"**/*.ts",
+	],
+	"exclude": [
+		"./pnpm"
+	]
+}
